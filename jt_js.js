@@ -32,8 +32,6 @@ function inverseColor() {
     imgButton.style.filter = 'none';
   }
 }
-
-const imgLogo = logo.querySelector('.imgLogo img');
 logo.style.filter = 'invert(100%)'
 
 musicButton.addEventListener('click', playMusic);
