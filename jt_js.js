@@ -1,4 +1,5 @@
 const musicButton = document.getElementById('musicButton');
+const logo = document.getElementById('logo');
 let isColInv = false;
 const classicalMusic = document.getElementById('classicalMusic');
 const randBg = [
@@ -22,15 +23,19 @@ if (classicalMusic.paused) {
 }
 
 function inverseColor() {
-const imgButton = musicButton.querySelector('.imgButton');
-isColInv = !isColInv;
+  const imgButton = musicButton.querySelector('.imgButton img');
+  isColInv = !isColInv;
 
-if (isColInv) {
-imgButton.style.filter = 'invert(100%)';
-} else {
-imgButton.style.filter = 'none';
+  if (isColInv) {
+    imgButton.style.filter = 'invert(100%)';
+  } else {
+    imgButton.style.filter = 'none';
+  }
 }
-}
+
+const imgLogo = logo.querySelector('.imgLogo img');
+logo.style.filter = 'invert(100%)'
+
 musicButton.addEventListener('click', playMusic);
 musicButton.addEventListener('click', inverseColor);
 
