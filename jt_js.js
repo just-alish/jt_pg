@@ -23,7 +23,7 @@ if (classicalMusic.paused) {
 }
 
 function inverseColor() {
-  const imgButton = musicButton.querySelector('.imgButton img');
+  const imgButton = musicButton.querySelector('img');
   isColInv = !isColInv;
 
   if (isColInv) {
