@@ -13,7 +13,7 @@ const randBg = [
 'https://media.discordapp.net/attachments/1135095275673882656/1135095509330182215/846778135___a_1440_1080.jpg?width=719&height=539',
 'https://media.discordapp.net/attachments/1135095275673882656/1135095509569245285/ezgif.com-webp-to-png.webp?width=719&height=480'
 ];
-
+//playing the music
 function playMusic() {
 if (classicalMusic.paused) {
 	classicalMusic.play();
@@ -21,7 +21,12 @@ if (classicalMusic.paused) {
 	classicalMusic.pause();
 }
 }
-
+// repeating the music
+function restartMusic() {
+  classicalMusic.currentTime = 0; // Reset the playback position to the beginning
+  classicalMusic.play();
+}
+//button behavior
 function inverseColor() {
   const imgButton = musicButton.querySelector('img');
   isColInv = !isColInv;
@@ -33,9 +38,10 @@ function inverseColor() {
   }
 }
 logo.style.filter = 'invert(100%)'
-
+//music event listeners
 musicButton.addEventListener('click', playMusic);
 musicButton.addEventListener('click', inverseColor);
+classicalMusic.addEventListener('ended', restartMusic);
 
 document.addEventListener('DOMContentLoaded', function() {
   const randomIndex = Math.floor(Math.random() * randBg.length);
