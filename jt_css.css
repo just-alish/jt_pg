@@ -12,7 +12,6 @@ cursor: url('https://cdn.discordapp.com/attachments/1135095275673882656/11845193
 }
 /* removing the ability to drag images */
 img {
-	user-drag: none;
 	user-select: none;
 	-webkit-user-drag: none;
 	-moz-user-select: none;
