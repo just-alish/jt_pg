@@ -8,7 +8,7 @@ flex-direction: column;
 position: relative;
 margin: 0;
 min-height: 100vh;
-cursor: url('https://cdn.discordapp.com/attachments/1135095275673882656/1184519389257678918/cursor.svg'), auto;
+cursor: url('assets/cursor.svg'), auto;
 }
 /* removing the ability to drag images */
 img {
